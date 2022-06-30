@@ -1,0 +1,1 @@
+console.log("Este mensaje se va por consola desde archivo .js")
