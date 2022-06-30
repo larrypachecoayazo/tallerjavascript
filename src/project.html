@@ -188,6 +188,7 @@
             </p>
 
             <div class="grid md:grid-cols-3 sm:grid-cols-2 gap-5">
+
                 <div class="col-span-1">
                     <div class="shadow-lg p-3">
                         <h1 class="text-center text-3xl">Nuevo proyecto</h1>
@@ -199,7 +200,10 @@
                                 </tr>
                                 <tr>
                                     <td>Nombre</td>
-                                    <td><input class="caja" type="text" name="nombre" id="nombre"></td>
+                                    <td>
+                                        <input class="caja" type="text" name="nombre" id="nombre">
+                                        <span id="errorNombre" class="hidden text-xs text-red-600">Datos no válidos en el nombre</span>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>Tipo Proyecto</td>
@@ -268,7 +272,7 @@
                                 <tr>
                                     <td>&nbsp;</td>
                                     <td>
-                                        <input type="button" value="Registrar Proyecto" class="bg-blue-400 p-2 border border-cyan-800">
+                                        <input type="button" id="btnAgregar" value="Registrar Proyecto" class="bg-blue-400 p-2 border border-cyan-800">
                                     </td>
                                 </tr>
                                 
@@ -399,20 +403,27 @@
             6. Presupuesto: Enteros. Maximo $50.000.000. No < 10.000.000
             7. Tipo Persona (Est o Prof)
 
-
-
-
         */
 
 
-        var arrayProyectos = [X, X, X, ]
+        
+        var spanErrorNombre = document.getElementById('errorNombre');
+        
+        function agregarProyecto() {
+            // Validación
 
-        var proyecto = {
-            nombre: "",
-            tipo: "",
-            ...
+            // Agreguen el nuevo proyecto al array
+
+            // Mostrar los proyectos
+
+            spanErrorNombre.classList.remove('hidden');
+
+            // alert('Agrego el proyecto al array')
+
         }
         
+        var btn = document.getElementById("btnAgregar")
+        btn.addEventListener('click', agregarProyecto)
 
         /*
         var caja1 = document.getElementById('numero1')
